@@ -1,0 +1,11 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Jalkapallo_UI" EntryPointType="Jalkapallo_UI.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Jalkapallo_UI" Source="Jalkapallo_UI.dll" />
+    <AssemblyPart x:Name="Jalkapallo_Shared" Source="Jalkapallo_Shared.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="StoreLauncher" Source="StoreLauncher.dll" />
+    <AssemblyPart x:Name="StoreWrapper" Source="StoreWrapper.dll" />
+    <AssemblyPart x:Name="WebRoleWCFConnector" Source="WebRoleWCFConnector.dll" />
+  </Deployment.Parts>
+</Deployment>

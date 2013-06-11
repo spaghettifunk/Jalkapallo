@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebRoleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:5895/WebRoleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:5895/WebRoleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5895/WebRoleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Jalkapallo_Shared" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWebRoleService_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_Registration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_LoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_LoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SaveCurrentTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCurrentTeam" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SaveCurrentTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCurrentTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeam" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetSavedTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSavedTeam" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetSavedTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSavedTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetPlayersOnSellDirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersOnSellDirect" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetPlayersOnSellDirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersOnSellDirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetPlayersOnSellAuctionHouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersOnSellAuctionHouse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetPlayersOnSellAuctionHouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersOnSellAuctionHouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetAllTeamsAndPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTeamsAndPlayers" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_GetAllTeamsAndPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTeamsAndPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SearchTeams_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTeams" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SearchTeams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTeamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SearchPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPlayers" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SearchPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SellPlayerDirectly_InputMessage">
+    <wsdl:part name="parameters" element="tns:SellPlayerDirectly" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SellPlayerDirectly_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SellPlayerDirectlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SellPlayerAuctionHouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:SellPlayerAuctionHouse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SellPlayerAuctionHouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SellPlayerAuctionHouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_BuyPlayerDirectly_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuyPlayerDirectly" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_BuyPlayerDirectly_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyPlayerDirectlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_MakeAnOfferForAPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeAnOfferForAPlayer" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_MakeAnOfferForAPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeAnOfferForAPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SetTrainingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTrainingType" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SetTrainingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTrainingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SetPushNotificationChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPushNotificationChannel" />
+  </wsdl:message>
+  <wsdl:message name="IWebRoleService_SetPushNotificationChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPushNotificationChannelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWebRoleService">
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/Registration" message="tns:IWebRoleService_Registration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/RegistrationResponse" message="tns:IWebRoleService_Registration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/LoginUser" message="tns:IWebRoleService_LoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/LoginUserResponse" message="tns:IWebRoleService_LoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SaveCurrentTeam" message="tns:IWebRoleService_SaveCurrentTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SaveCurrentTeamResponse" message="tns:IWebRoleService_SaveCurrentTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/GetTeam" message="tns:IWebRoleService_GetTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/GetTeamResponse" message="tns:IWebRoleService_GetTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/GetSavedTeam" message="tns:IWebRoleService_GetSavedTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/GetSavedTeamResponse" message="tns:IWebRoleService_GetSavedTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersOnSellDirect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/GetPlayersOnSellDirect" message="tns:IWebRoleService_GetPlayersOnSellDirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/GetPlayersOnSellDirectResponse" message="tns:IWebRoleService_GetPlayersOnSellDirect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersOnSellAuctionHouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/GetPlayersOnSellAuctionHouse" message="tns:IWebRoleService_GetPlayersOnSellAuctionHouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/GetPlayersOnSellAuctionHouseResponse" message="tns:IWebRoleService_GetPlayersOnSellAuctionHouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTeamsAndPlayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/GetAllTeamsAndPlayers" message="tns:IWebRoleService_GetAllTeamsAndPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/GetAllTeamsAndPlayersResponse" message="tns:IWebRoleService_GetAllTeamsAndPlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTeams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SearchTeams" message="tns:IWebRoleService_SearchTeams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SearchTeamsResponse" message="tns:IWebRoleService_SearchTeams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPlayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SearchPlayers" message="tns:IWebRoleService_SearchPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SearchPlayersResponse" message="tns:IWebRoleService_SearchPlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SellPlayerDirectly">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SellPlayerDirectly" message="tns:IWebRoleService_SellPlayerDirectly_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SellPlayerDirectlyResponse" message="tns:IWebRoleService_SellPlayerDirectly_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SellPlayerAuctionHouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SellPlayerAuctionHouse" message="tns:IWebRoleService_SellPlayerAuctionHouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SellPlayerAuctionHouseResponse" message="tns:IWebRoleService_SellPlayerAuctionHouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyPlayerDirectly">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/BuyPlayerDirectly" message="tns:IWebRoleService_BuyPlayerDirectly_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/BuyPlayerDirectlyResponse" message="tns:IWebRoleService_BuyPlayerDirectly_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeAnOfferForAPlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/MakeAnOfferForAPlayer" message="tns:IWebRoleService_MakeAnOfferForAPlayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/MakeAnOfferForAPlayerResponse" message="tns:IWebRoleService_MakeAnOfferForAPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTrainingType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SetTrainingType" message="tns:IWebRoleService_SetTrainingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SetTrainingTypeResponse" message="tns:IWebRoleService_SetTrainingType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPushNotificationChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWebRoleService/SetPushNotificationChannel" message="tns:IWebRoleService_SetPushNotificationChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWebRoleService/SetPushNotificationChannelResponse" message="tns:IWebRoleService_SetPushNotificationChannel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWebRoleService" type="tns:IWebRoleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/LoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentTeam">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SaveCurrentTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeam">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/GetTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSavedTeam">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/GetSavedTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersOnSellDirect">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/GetPlayersOnSellDirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayersOnSellAuctionHouse">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/GetPlayersOnSellAuctionHouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTeamsAndPlayers">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/GetAllTeamsAndPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTeams">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SearchTeams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPlayers">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SearchPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellPlayerDirectly">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SellPlayerDirectly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellPlayerAuctionHouse">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SellPlayerAuctionHouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuyPlayerDirectly">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/BuyPlayerDirectly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeAnOfferForAPlayer">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/MakeAnOfferForAPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTrainingType">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SetTrainingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPushNotificationChannel">
+      <soap:operation soapAction="http://tempuri.org/IWebRoleService/SetPushNotificationChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebRoleService">
+    <wsdl:port name="BasicHttpBinding_IWebRoleService" binding="tns:BasicHttpBinding_IWebRoleService">
+      <soap:address location="http://localhost:5895/WebRoleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkerRoleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51964/WorkerRoleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51964/WorkerRoleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51964/WorkerRoleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Jalkapallo_Shared" />
+      <xsd:import schemaLocation="http://localhost:51964/WorkerRoleService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkerRoleService_ComputeTrainings_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeTrainings" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeTrainings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeTrainingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeDirectlyPurchase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeDirectlyPurchase" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeDirectlyPurchase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeDirectlyPurchaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeAuctionHouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeAuctionHouse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeAuctionHouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeAuctionHouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeAllBudgets_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeAllBudgets" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeAllBudgets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeAllBudgetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_CreateChampionship_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChampionship" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_CreateChampionship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChampionshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_CreateMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMatch" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_CreateMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeMatch" />
+  </wsdl:message>
+  <wsdl:message name="IWorkerRoleService_ComputeMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputeMatchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkerRoleService">
+    <wsdl:operation name="ComputeTrainings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeTrainings" message="tns:IWorkerRoleService_ComputeTrainings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeTrainingsResponse" message="tns:IWorkerRoleService_ComputeTrainings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputeDirectlyPurchase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeDirectlyPurchase" message="tns:IWorkerRoleService_ComputeDirectlyPurchase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeDirectlyPurchaseResponse" message="tns:IWorkerRoleService_ComputeDirectlyPurchase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputeAuctionHouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeAuctionHouse" message="tns:IWorkerRoleService_ComputeAuctionHouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeAuctionHouseResponse" message="tns:IWorkerRoleService_ComputeAuctionHouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputeAllBudgets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeAllBudgets" message="tns:IWorkerRoleService_ComputeAllBudgets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeAllBudgetsResponse" message="tns:IWorkerRoleService_ComputeAllBudgets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateChampionship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/CreateChampionship" message="tns:IWorkerRoleService_CreateChampionship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/CreateChampionshipResponse" message="tns:IWorkerRoleService_CreateChampionship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/CreateMatch" message="tns:IWorkerRoleService_CreateMatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/CreateMatchResponse" message="tns:IWorkerRoleService_CreateMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputeMatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeMatch" message="tns:IWorkerRoleService_ComputeMatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkerRoleService/ComputeMatchResponse" message="tns:IWorkerRoleService_ComputeMatch_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWorkerRoleService" type="tns:IWorkerRoleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ComputeTrainings">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/ComputeTrainings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComputeDirectlyPurchase">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/ComputeDirectlyPurchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComputeAuctionHouse">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/ComputeAuctionHouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComputeAllBudgets">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/ComputeAllBudgets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateChampionship">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/CreateChampionship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMatch">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/CreateMatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComputeMatch">
+      <soap:operation soapAction="http://tempuri.org/IWorkerRoleService/ComputeMatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkerRoleService">
+    <wsdl:port name="BasicHttpBinding_IWorkerRoleService" binding="tns:BasicHttpBinding_IWorkerRoleService">
+      <soap:address location="http://localhost:51964/WorkerRoleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

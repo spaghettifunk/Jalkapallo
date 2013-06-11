@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="jalkapalloModelStoreContainer" CdmEntityContainer="JpEntities">
+    <EntitySetMapping Name="Coaches">
+      <EntityTypeMapping TypeName="jalkapalloModel.Coach">
+        <MappingFragment StoreEntitySet="Coach">
+          <ScalarProperty Name="GuidCoach" ColumnName="GuidCoach" />
+          <ScalarProperty Name="Centrocampo" ColumnName="Centrocampo" />
+          <ScalarProperty Name="TrainingType" ColumnName="TrainingType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cognome" ColumnName="Cognome" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Attacco" ColumnName="Attacco" />
+          <ScalarProperty Name="Difesa" ColumnName="Difesa" />
+          <ScalarProperty Name="Velocita" ColumnName="Velocita" />
+          <ScalarProperty Name="Parata" ColumnName="Parata" />
+          <ScalarProperty Name="Tiro" ColumnName="Tiro" />
+          <ScalarProperty Name="Coach_Ability" ColumnName="Coach_Ability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FakeNames">
+      <EntityTypeMapping TypeName="jalkapalloModel.FakeName">
+        <MappingFragment StoreEntitySet="FakeNames">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="givenname" ColumnName="givenname" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="streetaddress" ColumnName="streetaddress" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="countryfull" ColumnName="countryfull" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="kilograms" ColumnName="kilograms" />
+          <ScalarProperty Name="centimeters" ColumnName="centimeters" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Giocatoris">
+      <EntityTypeMapping TypeName="jalkapalloModel.Giocatori">
+        <MappingFragment StoreEntitySet="Giocatori">
+          <ScalarProperty Name="GuidGiocatore" ColumnName="GuidGiocatore" />
+          <ScalarProperty Name="Centrocampo" ColumnName="Centrocampo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Parata" ColumnName="Parata" />
+          <ScalarProperty Name="Difesa" ColumnName="Difesa" />
+          <ScalarProperty Name="Attacco" ColumnName="Attacco" />
+          <ScalarProperty Name="Velocita" ColumnName="Velocita" />
+          <ScalarProperty Name="Tiro" ColumnName="Tiro" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Stipendio" ColumnName="Stipendio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matches">
+      <EntityTypeMapping TypeName="jalkapalloModel.Match">
+        <MappingFragment StoreEntitySet="Match">
+          <ScalarProperty Name="IdCampionato" ColumnName="IdCampionato" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Home" ColumnName="Home" />
+          <ScalarProperty Name="Away" ColumnName="Away" />
+          <ScalarProperty Name="Punteggio_Home" ColumnName="Punteggio_Home" />
+          <ScalarProperty Name="Punteggio_Away" ColumnName="Punteggio_Away" />
+          <ScalarProperty Name="Data_Match" ColumnName="Data_Match" />
+          <ScalarProperty Name="Dati_Match" ColumnName="Dati_Match" />
+          <ScalarProperty Name="RedCard" ColumnName="RedCard" />
+          <ScalarProperty Name="YellowCard" ColumnName="YellowCard" />
+          <ScalarProperty Name="GoalList" ColumnName="GoalList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Squadres">
+      <EntityTypeMapping TypeName="jalkapalloModel.Squadre">
+        <MappingFragment StoreEntitySet="Squadre">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="TeamObject" ColumnName="TeamObject" />
+          <ScalarProperty Name="Formazione" ColumnName="Formazione" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="jalkapalloModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campionatis">
+      <EntityTypeMapping TypeName="jalkapalloModel.Campionati">
+        <MappingFragment StoreEntitySet="Campionati">
+          <ScalarProperty Name="Match" ColumnName="Match" />
+          <ScalarProperty Name="Classifica" ColumnName="Classifica" />
+          <ScalarProperty Name="Teams" ColumnName="Teams" />
+          <ScalarProperty Name="Livello" ColumnName="Livello" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sellings">
+      <EntityTypeMapping TypeName="jalkapalloModel.Selling">
+        <MappingFragment StoreEntitySet="Selling">
+          <ScalarProperty Name="SoldToTeam" ColumnName="SoldToTeam" />
+          <ScalarProperty Name="Sold" ColumnName="Sold" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SellDate" ColumnName="SellDate" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuctionHouses">
+      <EntityTypeMapping TypeName="jalkapalloModel.AuctionHouse">
+        <MappingFragment StoreEntitySet="AuctionHouse">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CurrentTeamName" ColumnName="CurrentTeamName" />
+          <ScalarProperty Name="OriginalTeamName" ColumnName="OriginalTeamName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

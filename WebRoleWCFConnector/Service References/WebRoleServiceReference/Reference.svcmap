@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="491caaa6-0b75-45cd-9e09-76256e76e85b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5895/WebRoleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WebRoleService.xsd" MetadataType="Schema" ID="d45a5030-b0b1-4fbe-a164-c5996efc4329" SourceId="1" SourceUrl="http://localhost:5895/WebRoleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WebRoleService.disco" MetadataType="Disco" ID="5f0cd67c-b590-4206-96fe-309fda95b749" SourceId="1" SourceUrl="http://localhost:5895/WebRoleService.svc?disco" />
+    <MetadataFile FileName="WebRoleService1.xsd" MetadataType="Schema" ID="3cf140ae-be1c-48f8-a04b-c5c87b1a08af" SourceId="1" SourceUrl="http://localhost:5895/WebRoleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WebRoleService2.xsd" MetadataType="Schema" ID="0e166c65-9128-4f89-ab21-112ce71099e1" SourceId="1" SourceUrl="http://localhost:5895/WebRoleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WebRoleService.wsdl" MetadataType="Wsdl" ID="2373028a-f1af-41a2-aafd-8c3597c9b197" SourceId="1" SourceUrl="http://localhost:5895/WebRoleService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,5 @@
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\LINQ2Entities\bin\Debug\LINQ2Entities.dll.config
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\LINQ2Entities\bin\Debug\LINQ2Entities.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\LINQ2Entities\bin\Debug\LINQ2Entities.pdb
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\LINQ2Entities\obj\x86\Debug\LINQ2Entities.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\LINQ2Entities\obj\x86\Debug\LINQ2Entities.pdb

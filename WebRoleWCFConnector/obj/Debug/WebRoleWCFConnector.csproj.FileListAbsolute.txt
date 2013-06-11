@@ -1,0 +1,7 @@
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\Bin\Debug\WebRoleWCFConnector.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\Bin\Debug\WebRoleWCFConnector.pdb
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\Bin\Debug\Jalkapallo_Shared.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\Bin\Debug\Jalkapallo_Shared.pdb
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\obj\Debug\WebRoleWCFConnector.csprojResolveAssemblyReference.cache
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\obj\Debug\WebRoleWCFConnector.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\WebRoleWCFConnector\obj\Debug\WebRoleWCFConnector.pdb

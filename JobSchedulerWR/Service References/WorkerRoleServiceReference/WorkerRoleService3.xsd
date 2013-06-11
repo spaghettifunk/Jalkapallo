@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Jalkapallo_Shared" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Jalkapallo_Shared" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51964/WorkerRoleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:51964/WorkerRoleService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Match">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Away" nillable="true" type="tns:Team" />
+      <xs:element minOccurs="0" name="AwayStringFromServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Home" nillable="true" type="tns:Team" />
+      <xs:element minOccurs="0" name="HomeStringFromServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCampionato" type="ser:guid" />
+      <xs:element minOccurs="0" name="MatchGoals" nillable="true" type="tns:ArrayOfGoal" />
+      <xs:element minOccurs="0" name="RedCard" nillable="true" type="tns:ArrayOfPlayer" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RedCardStringFromServer" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ResultAway" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultHome" type="xs:int" />
+      <xs:element minOccurs="0" name="YellowCard" nillable="true" type="tns:ArrayOfPlayer" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="YellowCardStringFromServer" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Match" nillable="true" type="tns:Match" />
+  <xs:complexType name="Team">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Budget" type="xs:double" />
+      <xs:element minOccurs="0" name="Coach" nillable="true" type="tns:Coach" />
+      <xs:element minOccurs="0" name="Formation" type="xs:int" />
+      <xs:element minOccurs="0" name="League" type="ser:guid" />
+      <xs:element minOccurs="0" name="Matches" nillable="true" type="tns:ArrayOfMatch" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeamPlayers" nillable="true" type="tns:ArrayOfPlayer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Team" nillable="true" type="tns:Team" />
+  <xs:complexType name="Coach">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Player">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CoachAbility" type="xs:int" />
+          <xs:element minOccurs="0" name="CoachGenericSkills" nillable="true" type="tns:PlayerSkills" />
+          <xs:element minOccurs="0" name="CoachName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoachSurname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TrainingType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Coach" nillable="true" type="tns:Coach" />
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" type="tns:RolePlayer" />
+      <xs:element minOccurs="0" name="Skills" nillable="true" type="tns:PlayerSkills" />
+      <xs:element minOccurs="0" name="Stipendio" type="xs:int" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+  <xs:simpleType name="RolePlayer">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Portiere" />
+      <xs:enumeration value="Difensore" />
+      <xs:enumeration value="CentroCampista" />
+      <xs:enumeration value="Attaccante" />
+      <xs:enumeration value="Allenatore" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RolePlayer" nillable="true" type="tns:RolePlayer" />
+  <xs:complexType name="PlayerSkills">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attacco" type="xs:float" />
+      <xs:element minOccurs="0" name="Centrocampo" type="xs:float" />
+      <xs:element minOccurs="0" name="Difesa" type="xs:float" />
+      <xs:element minOccurs="0" name="Exp" type="xs:float" />
+      <xs:element minOccurs="0" name="Parata" type="xs:float" />
+      <xs:element minOccurs="0" name="Tiro" type="xs:float" />
+      <xs:element minOccurs="0" name="Velocita" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerSkills" nillable="true" type="tns:PlayerSkills" />
+  <xs:complexType name="ArrayOfMatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Match" nillable="true" type="tns:Match" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatch" nillable="true" type="tns:ArrayOfMatch" />
+  <xs:complexType name="ArrayOfPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Player" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayer" nillable="true" type="tns:ArrayOfPlayer" />
+  <xs:complexType name="ArrayOfGoal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Goal" nillable="true" type="tns:Goal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGoal" nillable="true" type="tns:ArrayOfGoal" />
+  <xs:complexType name="Goal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GoalType" type="tns:GoalType" />
+      <xs:element minOccurs="0" name="Markers" nillable="true" type="tns:Player" />
+      <xs:element minOccurs="0" name="MinutesGoal" type="xs:int" />
+      <xs:element minOccurs="0" name="Team" nillable="true" type="tns:Team" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Goal" nillable="true" type="tns:Goal" />
+  <xs:simpleType name="GoalType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Rigore" />
+      <xs:enumeration value="Punizione" />
+      <xs:enumeration value="Testa" />
+      <xs:enumeration value="Tiro" />
+      <xs:enumeration value="Autogol" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GoalType" nillable="true" type="tns:GoalType" />
+</xs:schema>

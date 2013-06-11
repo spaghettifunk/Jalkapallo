@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="acb311e6-36f9-4ec4-8d23-7ddba887bee1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51964/WorkerRoleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkerRoleService.xsd" MetadataType="Schema" ID="1f9f9979-2244-42a9-86c1-cdf16d9fd28c" SourceId="1" SourceUrl="http://localhost:51964/WorkerRoleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkerRoleService1.xsd" MetadataType="Schema" ID="55850307-f929-4a86-9c31-66d0cc13758f" SourceId="1" SourceUrl="http://localhost:51964/WorkerRoleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WorkerRoleService2.xsd" MetadataType="Schema" ID="b8ed2e33-87ec-4a91-b2b1-6564de4b0090" SourceId="1" SourceUrl="http://localhost:51964/WorkerRoleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WorkerRoleService.wsdl" MetadataType="Wsdl" ID="15f3afec-fb6f-4d1c-9dcb-da3c5abd96f0" SourceId="1" SourceUrl="http://localhost:51964/WorkerRoleService.svc?wsdl" />
+    <MetadataFile FileName="WorkerRoleService.disco" MetadataType="Disco" ID="4d9efd47-7409-4567-b3d2-29faa8ab0b4b" SourceId="1" SourceUrl="http://localhost:51964/WorkerRoleService.svc?disco" />
+    <MetadataFile FileName="WorkerRoleService3.xsd" MetadataType="Schema" ID="f2a6825a-7007-46c7-8bd2-7420577e6893" SourceId="1" SourceUrl="http://localhost:51964/WorkerRoleService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

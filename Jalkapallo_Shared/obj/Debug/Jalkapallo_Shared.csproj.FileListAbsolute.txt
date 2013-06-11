@@ -1,0 +1,4 @@
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\Jalkapallo_Shared\bin\Debug\Jalkapallo_Shared.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\Jalkapallo_Shared\bin\Debug\Jalkapallo_Shared.pdb
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\Jalkapallo_Shared\obj\Debug\Jalkapallo_Shared.dll
+C:\Users\berdin.TXTMI00\Documents\Visual Studio 2010\Projects\JP\JPManager\Jalkapallo Solution\JPManager\Jalkapallo_Shared\obj\Debug\Jalkapallo_Shared.pdb

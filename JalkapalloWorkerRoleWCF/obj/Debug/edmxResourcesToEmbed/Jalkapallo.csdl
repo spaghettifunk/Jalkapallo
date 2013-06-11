@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jalkapalloModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="JpEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Coaches" EntityType="jalkapalloModel.Coach" />
+    <EntitySet Name="FakeNames" EntityType="jalkapalloModel.FakeName" />
+    <EntitySet Name="Giocatoris" EntityType="jalkapalloModel.Giocatori" />
+    <EntitySet Name="Matches" EntityType="jalkapalloModel.Match" />
+    <EntitySet Name="Squadres" EntityType="jalkapalloModel.Squadre" />
+    <EntitySet Name="Users" EntityType="jalkapalloModel.User" />
+    <AssociationSet Name="FK__Giocatori__TeamN__403A8C7D" Association="jalkapalloModel.FK__Giocatori__TeamN__403A8C7D">
+      <End Role="Squadre" EntitySet="Squadres" />
+      <End Role="Giocatori" EntitySet="Giocatoris" />
+    </AssociationSet>
+    <EntitySet Name="Campionatis" EntityType="jalkapalloModel.Campionati" />
+    <EntitySet Name="Sellings" EntityType="jalkapalloModel.Selling" />
+    <EntitySet Name="AuctionHouses" EntityType="jalkapalloModel.AuctionHouse" />
+  </EntityContainer>
+  <EntityType Name="Coach">
+    <Key>
+      <PropertyRef Name="TeamName" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Cognome" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="TeamName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Birthday" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Experience" Type="Double" Nullable="false" />
+    <Property Name="Attacco" Type="Double" Nullable="false" />
+    <Property Name="Difesa" Type="Double" Nullable="false" />
+    <Property Name="Velocita" Type="Double" Nullable="false" />
+    <Property Name="Parata" Type="Double" Nullable="false" />
+    <Property Name="Tiro" Type="Double" Nullable="false" />
+    <Property Name="Coach_Ability" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="TrainingType" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Centrocampo" />
+    <Property Type="Guid" Name="GuidCoach" />
+  </EntityType>
+  <EntityType Name="FakeName">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="givenname" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="surname" Type="String" Nullable="false" MaxLength="23" Unicode="true" FixedLength="false" />
+    <Property Name="streetaddress" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="country" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="countryfull" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="birthday" Type="DateTime" Nullable="false" />
+    <Property Name="kilograms" Type="Decimal" Nullable="false" Precision="5" Scale="1" />
+    <Property Name="centimeters" Type="Int16" Nullable="false" />
+    <Property Name="guid" Type="String" Nullable="false" MaxLength="36" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Giocatori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeamName" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="Nome" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Parata" Type="Double" />
+    <Property Name="Difesa" Type="Double" />
+    <Property Name="Attacco" Type="Double" />
+    <Property Name="Velocita" Type="Double" />
+    <Property Name="Tiro" Type="Double" />
+    <Property Name="Experience" Type="Double" />
+    <Property Name="Surname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Birthday" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Weight" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Height" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Role" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Stipendio" Type="Double" />
+    <NavigationProperty Name="Squadre" Relationship="jalkapalloModel.FK__Giocatori__TeamN__403A8C7D" FromRole="Giocatori" ToRole="Squadre" />
+    <Property Type="Double" Name="Centrocampo" />
+    <Property Type="Guid" Name="GuidGiocatore" />
+  </EntityType>
+  <EntityType Name="Match">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Home" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Away" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Punteggio_Home" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Punteggio_Away" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Data_Match" Type="DateTime" Nullable="false" />
+    <Property Name="Dati_Match" Type="String" Nullable="false" MaxLength="8000" Unicode="false" FixedLength="false" />
+    <Property Name="RedCard" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="YellowCard" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="GoalList" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Type="Guid" Name="IdCampionato" />
+  </EntityType>
+  <EntityType Name="Squadre">
+    <Key>
+      <PropertyRef Name="TeamName" />
+    </Key>
+    <Property Name="Id" Type="Int32" />
+    <Property Name="TeamName" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="UserName" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="Budget" Type="Double" />
+    <Property Name="TeamObject" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Formazione" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Giocatoris" Relationship="jalkapalloModel.FK__Giocatori__TeamN__403A8C7D" FromRole="Squadre" ToRole="Giocatori" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="TeamName" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Giocatori__TeamN__403A8C7D">
+    <End Role="Squadre" Type="jalkapalloModel.Squadre" Multiplicity="0..1" />
+    <End Role="Giocatori" Type="jalkapalloModel.Giocatori" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Squadre">
+        <PropertyRef Name="TeamName" />
+      </Principal>
+      <Dependent Role="Giocatori">
+        <PropertyRef Name="TeamName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Campionati">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Livello" />
+    <Property Type="String" Name="Teams" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Classifica" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Match" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Selling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Surname" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TeamName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SellDate" Nullable="false" />
+    <Property Type="Int64" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Sold" Nullable="false" />
+    <Property Type="String" Name="SoldToTeam" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AuctionHouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Surname" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OriginalTeamName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CurrentTeamName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="Price" Nullable="false" />
+  </EntityType>
+</Schema>

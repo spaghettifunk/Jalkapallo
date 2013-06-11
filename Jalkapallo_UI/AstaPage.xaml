@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Jalkapallo_UI.AstaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+    <!--LayoutRoot è la griglia radice in cui viene inserito tutto il contenuto della pagina-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Name" Height="59" Margin="8,8,8,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" TextAlignment="Center"><Run Text="Nome + cognome"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Role" Height="37" Margin="18,122,210,0" Grid.Row="1" TextWrapping="Wrap" Text="Ruolo" VerticalAlignment="Top" TextAlignment="Left" FontSize="20"/>
+        <TextBlock x:Name="EXP" Height="30" Margin="180,413,237,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Value"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Speed" Margin="180,0,237,300" Grid.Row="1" TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom"><Run Text="Value"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="GoalKeeping" Height="30" Margin="180,0,237,241" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom"><Run Text="Value"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Defense" Height="30" Margin="180,0,237,183" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Text="Value"/>
+        <TextBlock x:Name="Midfield" Height="30" Margin="180,0,237,126" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom"><Run Text="Value"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Attack" Height="30" Margin="180,0,237,72" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom"><Run Text="Value"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Kick" Height="30" Margin="180,0,237,19" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom"><Run Text="Value"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="EXP_Copy" Height="30" Margin="18,413,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="137"><Run Text="EXP"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Speed_Copy" Margin="18,0,0,300" Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Left" Width="137" Height="30" VerticalAlignment="Bottom"><Run Text="Speed"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="GoalKeeping_Copy" Height="30" Margin="18,0,0,241" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="137"><Run Text="GoalKeeping"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Defense_Copy" Height="30" Margin="18,0,0,183" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="137"><Run Text="Defense"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Midfield_Copy" Height="30" Margin="18,0,0,126" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="137"><Run Text="Midfield"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Attack_Copy" Height="30" Margin="18,0,0,72" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="137"><Run Text="Attack"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="Kick_Copy" Height="30" Margin="18,0,0,19" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="137"><Run Text="Kick"/><LineBreak/><Run/></TextBlock>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,413,73,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,0,73,300" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,0,73,241" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,0,73,183" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,0,73,126" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,0,73,72" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle Fill="#FFFF9800" HorizontalAlignment="Right" Height="30" Margin="0,0,73,19" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="150" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTexp" Fill="White" Height="30" Margin="0,413,73,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTspeed" Fill="White" Height="30" Margin="0,0,73,300" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTgk" Fill="White" Height="30" Margin="0,0,73,241" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTdefense" Fill="White" Height="30" Margin="0,0,73,183" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTmid" Fill="White" Height="30" Margin="0,0,73,126" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTattack" Fill="White" Height="30" Margin="0,0,73,72" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <Rectangle x:Name="RECTkick" Fill="White" Height="30" Margin="0,0,73,19" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" d:LayoutOverrides="HorizontalAlignment"/>
+        <TextBlock x:Name="BirthDay" Height="37" Margin="18,159,210,0" Grid.Row="1" TextWrapping="Wrap" Text="Ruolo" VerticalAlignment="Top" TextAlignment="Left" FontSize="20"/>
+        <TextBlock x:Name="Stipendio" Height="37" Margin="18,269,210,0" Grid.Row="1" TextWrapping="Wrap" Text="Ruolo" VerticalAlignment="Top" TextAlignment="Left" FontSize="20"/>
+        <TextBlock x:Name="Height" Height="37" Margin="18,196,210,0" Grid.Row="1" TextWrapping="Wrap" Text="Ruolo" VerticalAlignment="Top" TextAlignment="Left" FontSize="20"/>
+        <TextBlock x:Name="Weight" Height="37" Margin="18,232,210,0" Grid.Row="1" TextWrapping="Wrap" Text="Ruolo" VerticalAlignment="Top" TextAlignment="Left" FontSize="20"/>
+        <TextBlock x:Name="Country" Height="37" Margin="18,85,210,0" Grid.Row="1" TextWrapping="Wrap" Text="Ruolo" VerticalAlignment="Top" TextAlignment="Left" FontSize="20"/>
+      
+        <TextBlock x:Name="PriceHead" HorizontalAlignment="Right" Height="47" Margin="0,85,19,0" Grid.Row="1" TextWrapping="Wrap" Text="CURRENT PRICE:" VerticalAlignment="Top" Width="167" TextAlignment="Center"/>
+        <TextBlock x:Name="Price" HorizontalAlignment="Right" Margin="0,122,19,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="167" TextAlignment="Center"/>
+
+        <TextBlock x:Name="BestOffererHead" HorizontalAlignment="Right" Height="47" Margin="0,173,19,0" Grid.Row="1" TextWrapping="Wrap" Text="BEST OFFERER:" VerticalAlignment="Top" Width="167" TextAlignment="Center"/>
+        <TextBlock x:Name="BestOfferer" HorizontalAlignment="Right" Margin="0,209,19,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="167" TextAlignment="Center"/>
+
+        <TextBlock x:Name="YourOfferHead" HorizontalAlignment="Right" Height="47" Margin="0,275,10,0" Grid.Row="1" TextWrapping="Wrap" Text="YOUR OFFER:" VerticalAlignment="Top" Width="204" TextAlignment="Center"/>
+      
+        <Button x:Name="Buy" Content="Offer" HorizontalAlignment="Right" Height="73" Margin="0,312,301,0" Grid.Row="1" VerticalAlignment="Top" Width="167" Click="Offer_Click"/>
+        <TextBox InputScope="TelephoneNumber" KeyDown="MyOffer_KeyDown" Grid.Row="1" Height="72" HorizontalAlignment="Center" Margin="228,0,0,416" x:Name="MyOffer" Text="" VerticalAlignment="Bottom" Width="233" FontSize="22" DataContext="{Binding}" TextAlignment="Center" />
+    </Grid>
+
+</phone:PhoneApplicationPage>

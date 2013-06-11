@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Jalkapallo_Shared" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Jalkapallo_Shared" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5895/WebRoleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Player" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayer" nillable="true" type="tns:ArrayOfPlayer" />
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" type="tns:RolePlayer" />
+      <xs:element minOccurs="0" name="Skills" nillable="true" type="tns:PlayerSkills" />
+      <xs:element minOccurs="0" name="Stipendio" type="xs:int" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+  <xs:simpleType name="RolePlayer">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Portiere" />
+      <xs:enumeration value="Difensore" />
+      <xs:enumeration value="CentroCampista" />
+      <xs:enumeration value="Attaccante" />
+      <xs:enumeration value="Allenatore" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RolePlayer" nillable="true" type="tns:RolePlayer" />
+  <xs:complexType name="PlayerSkills">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attacco" type="xs:float" />
+      <xs:element minOccurs="0" name="Centrocampo" type="xs:float" />
+      <xs:element minOccurs="0" name="Difesa" type="xs:float" />
+      <xs:element minOccurs="0" name="Exp" type="xs:float" />
+      <xs:element minOccurs="0" name="Parata" type="xs:float" />
+      <xs:element minOccurs="0" name="Tiro" type="xs:float" />
+      <xs:element minOccurs="0" name="Velocita" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerSkills" nillable="true" type="tns:PlayerSkills" />
+</xs:schema>

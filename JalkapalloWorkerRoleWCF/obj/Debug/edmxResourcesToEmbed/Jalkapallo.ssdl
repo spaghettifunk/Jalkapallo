@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jalkapalloModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="jalkapalloModelStoreContainer">
+    <EntitySet Name="AuctionHouse" EntityType="jalkapalloModel.Store.AuctionHouse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Campionati" EntityType="jalkapalloModel.Store.Campionati" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Coach" EntityType="jalkapalloModel.Store.Coach" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FakeNames" EntityType="jalkapalloModel.Store.FakeNames" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Giocatori" EntityType="jalkapalloModel.Store.Giocatori" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Match" EntityType="jalkapalloModel.Store.Match" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Selling" EntityType="jalkapalloModel.Store.Selling" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Squadre" EntityType="jalkapalloModel.Store.Squadre" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="jalkapalloModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Giocatori__TeamN__403A8C7D" Association="jalkapalloModel.Store.FK__Giocatori__TeamN__403A8C7D">
+      <End Role="Squadre" EntitySet="Squadre" />
+      <End Role="Giocatori" EntitySet="Giocatori" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AuctionHouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="OriginalTeamName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CurrentTeamName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Price" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Campionati">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Livello" Type="int" />
+    <Property Name="Teams" Type="xml" />
+    <Property Name="Classifica" Type="xml" />
+    <Property Name="Match" Type="xml" />
+  </EntityType>
+  <EntityType Name="Coach">
+    <Key>
+      <PropertyRef Name="TeamName" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Cognome" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TeamName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Country" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Birthday" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Experience" Type="float" Nullable="false" />
+    <Property Name="Attacco" Type="float" Nullable="false" />
+    <Property Name="Difesa" Type="float" Nullable="false" />
+    <Property Name="Velocita" Type="float" Nullable="false" />
+    <Property Name="Parata" Type="float" Nullable="false" />
+    <Property Name="Tiro" Type="float" Nullable="false" />
+    <Property Name="Coach_Ability" Type="int" Nullable="false" />
+    <Property Name="TrainingType" Type="nvarchar" MaxLength="255" />
+    <Property Name="Centrocampo" Type="float" />
+    <Property Name="GuidCoach" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="FakeNames">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="givenname" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="surname" Type="nvarchar" Nullable="false" MaxLength="23" />
+    <Property Name="streetaddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="country" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="countryfull" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="birthday" Type="datetime" Nullable="false" />
+    <Property Name="kilograms" Type="decimal" Nullable="false" Precision="5" Scale="1" />
+    <Property Name="centimeters" Type="smallint" Nullable="false" />
+    <Property Name="guid" Type="nvarchar" Nullable="false" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="Giocatori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" />
+    <Property Name="Parata" Type="float" />
+    <Property Name="Difesa" Type="float" />
+    <Property Name="Attacco" Type="float" />
+    <Property Name="Velocita" Type="float" />
+    <Property Name="Tiro" Type="float" />
+    <Property Name="Experience" Type="float" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Birthday" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Weight" Type="varchar" MaxLength="50" />
+    <Property Name="Height" Type="varchar" MaxLength="50" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+    <Property Name="Stipendio" Type="float" />
+    <Property Name="Centrocampo" Type="float" />
+    <Property Name="GuidGiocatore" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Match">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Home" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Away" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Punteggio_Home" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Punteggio_Away" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Data_Match" Type="date" Nullable="false" />
+    <Property Name="Dati_Match" Type="varchar" Nullable="false" />
+    <Property Name="RedCard" Type="varchar" MaxLength="1000" />
+    <Property Name="YellowCard" Type="varchar" MaxLength="1000" />
+    <Property Name="GoalList" Type="varchar" MaxLength="1000" />
+    <Property Name="IdCampionato" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Selling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Surname" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="TeamName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="SellDate" Type="datetime" Nullable="false" />
+    <Property Name="Price" Type="bigint" Nullable="false" />
+    <Property Name="Sold" Type="bit" Nullable="false" />
+    <Property Name="SoldToTeam" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Squadre">
+    <Key>
+      <PropertyRef Name="TeamName" />
+    </Key>
+    <Property Name="Id" Type="int" />
+    <Property Name="TeamName" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Budget" Type="float" />
+    <Property Name="TeamObject" Type="xml" />
+    <Property Name="Formazione" Type="xml" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="TeamName" Type="nvarchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <Association Name="FK__Giocatori__TeamN__403A8C7D">
+    <End Role="Squadre" Type="jalkapalloModel.Store.Squadre" Multiplicity="0..1" />
+    <End Role="Giocatori" Type="jalkapalloModel.Store.Giocatori" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Squadre">
+        <PropertyRef Name="TeamName" />
+      </Principal>
+      <Dependent Role="Giocatori">
+        <PropertyRef Name="TeamName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
